@@ -1,0 +1,63 @@
+.cm-theme-nord {
+  --cm-color: #d8dee9;
+  --cm-background: #2e3440;
+  --cm-gutterBackground: #3b4252;
+  --cm-comment: #4c566a;
+  --cm-string: #a3be8c;
+  --cm-number: #b48ead;
+  --cm-variable: #d8dee9;
+  --cm-variable-2: #8fbcbb;
+  --cm-def: #88c0d0;
+  --cm-operator: #81a1c1;
+  --cm-keyword: #81a1c1;
+  --cm-atom: #81a1c1;
+  --cm-meta: #5e81ac;
+  --cm-error: #bf616a;
+  --cm-link: #88c0d0;
+  --cm-tag: #81a1c1;
+  --cm-attribute: #8fbcbb;
+}
+
+.cm-theme-nord .cm-gutters {
+  background-color: var(--cm-gutterBackground);
+  color: var(--cm-color);
+}
+
+.cm-theme-nord .cm-scroller {
+  color: var(--cm-color);
+}
+
+.cm-theme-nord .cm-matchingBracket,
+.cm-theme-nord .cm-nonmatchingBracket {
+  background-color: var(--cm-background);
+}
+
+.cm-theme-nord .CodeMirror-selected {
+  background-color: rgba(136, 192, 208, 0.99);
+}
+
+.cm-theme-nord .CodeMirror-line::selection,
+.cm-theme-nord .CodeMirror-line > span::selection,
+.cm-theme-nord .CodeMirror-line > span > span::selection {
+  background-color: rgba(136, 192, 208, 0.99);
+}
+
+.cm-theme-nord .CodeMirror-activeline-background {
+  background-color: var(--cm-gutterBackground);
+}
+
+.cm-theme-nord .CodeMirror-matchingtag {
+  background-color: var(--cm-gutterBackground);
+}
+
+.cm-theme-nord .CodeMirror-searchMatch {
+  background-color: var(--cm-gutterBackground);
+}
+
+.cm-theme-nord .CodeMirror-searchMatch[selected] {
+  background-color: rgba(136, 192, 208, 0.99);
+}
+
+.cm-s-nord span.cm-comment {
+  color: var(--cm-comment);
+}

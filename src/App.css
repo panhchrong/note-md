@@ -1,0 +1,70 @@
+.code-mirror-container {
+  /* position: fixed; */
+  z-index: 10;
+}
+
+::-webkit-scrollbar {
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(76, 76, 94);
+  border-radius: 2px;
+}
+
+.floating-form {
+  z-index: 50;
+}
+
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.markdown-view div {
+  padding: 10px 20px 10px 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.markdown-view img {
+  display: block;
+  margin: 0 auto;
+  max-width: 95%;
+}
+
+.markdown-view ol {
+  list-style-type: decimal;
+}
+
+.markdown-view hr {
+  background-color: #4c5363;
+  border-radius: 2%;
+}
+
+.markdown-view ul {
+  list-style-type: disc;
+}
+
+.markdown-view button {
+  color: #76c7e4d7;
+}
+
+.markdown-view button:hover {
+  text-decoration: underline;
+}
+
+.markdown-view button:focus {
+  outline: none;
+}
+
+markdown-write-list {
+  color: rgb(222, 212, 199);
+}

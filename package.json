@@ -1,0 +1,148 @@
+{
+  "name": "NoteMD",
+  "version": "0.1.2",
+  "description": "Note.MD",
+  "author": "Sith Panhchakroung",
+  "license": "MIT",
+  "private": true,
+  "main": "public/electron.js",
+  "homepage": "./",
+  "dependencies": {
+    "@codemirror/highlight": "^0.19.8",
+    "@codemirror/lang-markdown": "^6.1.1",
+    "@codemirror/language-data": "^6.3.1",
+    "@electron/remote": "^2.0.10",
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@tailwindcss/forms": "^0.5.3",
+    "@uiw/codemirror-theme-nord": "^4.21.0",
+    "@uiw/codemirror-themes": "^4.21.0",
+    "@uiw/react-codemirror": "^4.20.4",
+    "@uiw/react-markdown-preview": "^4.1.13",
+    "axios": "^1.2.0",
+    "child-process": "^1.0.2",
+    "codemirror": "^6.0.1",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.1.4",
+    "downloads-folder": "^3.0.3",
+    "electron-is-dev": "^2.0.0",
+    "flowbite-react": "^0.3.5",
+    "marked": "^5.0.4",
+    "mitt": "^3.0.0",
+    "play-sound": "^1.1.5",
+    "react": "^18.2.0",
+    "react-codemirror2": "^7.2.1",
+    "react-dom": "^18.2.0",
+    "react-dropzone": "^14.2.3",
+    "react-markdown": "^8.0.7",
+    "react-router-dom": "^6.11.2",
+    "remark-gfm": "^3.0.1"
+  },
+  "scripts": {
+    "web": "react-scripts start",
+    "build": "react-scripts build",
+    "electron:build": "yarn build && electron-builder",
+    "watch": "webpack --watch",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "dev": "concurrently \"cross-env BROWSER=none yarn web\"  \"wait-on http://localhost:8000/ && electron .\"",
+    "electron": "electron .",
+    "forge:start": "electron-forge start --app-path='public/electron.js'",
+    "forge:package": "electron-forge package",
+    "forge:make": "electron-forge make"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.4",
+    "@electron-forge/maker-dmg": "^6.0.4",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/fbemitter": "^2.0.32",
+    "@types/jest": "^27.5.2",
+    "@types/marked": "^5.0.0",
+    "@types/node": "^16.18.3",
+    "@types/react": "^18.0.25",
+    "@types/react-color": "^3.0.6",
+    "@types/react-dom": "^18.0.9",
+    "@types/react-router-dom": "^5.3.3",
+    "@uiw/codemirror-theme-tokyo-night-storm": "^4.21.2",
+    "autoprefixer": "^10.4.13",
+    "css-loader": "^6.8.1",
+    "electron": "^25.1.0",
+    "electron-builder": "^23.6.0",
+    "electron-forge": "^5.2.4",
+    "electron-prebuilt-compile": "6.1.9",
+    "electron-reload": "^2.0.0-alpha.1",
+    "postcss": "^8.4.19",
+    "react-color": "^2.19.3",
+    "react-scripts": "5.0.1",
+    "style-loader": "^3.3.3",
+    "tailwindcss": "^3.2.4",
+    "ts-loader": "^9.4.3",
+    "typescript": "^4.9.3",
+    "web-vitals": "^2.1.4",
+    "webpack-cli": "^5.1.1"
+  },
+  "build": {
+    "appId": "com.prod.music-player",
+    "productName": "Note Marker",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "icon": "public/electron-app-icon.ico"
+    },
+    "mac": {
+      "icon": "public/electron-app-icon.ico"
+    },
+    "linux": {
+      "icon": "public/electron-app-icon.ico"
+    }
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "Note.md"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "win32"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  }
+}
